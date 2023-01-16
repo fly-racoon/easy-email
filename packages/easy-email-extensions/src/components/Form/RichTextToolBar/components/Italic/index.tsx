@@ -38,9 +38,9 @@ export function Italic(props: LinkProps) {
     <Tooltip
       color='#fff'
       position='tl'
-      content="Italic"
+      content="Курсив"
     >
-      <ToolItem title='Italic' isActive={Boolean(node)} icon={<IconFont iconName='icon-italic' />} onClick={onClick} />
+      <ToolItem title='Курсив' isActive={Boolean(node)} icon={<IconFont iconName='icon-italic' />} onClick={onClick} />
     </Tooltip>
   );
 }

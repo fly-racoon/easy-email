@@ -29,7 +29,7 @@ export type ISection = IBlockData<
 >;
 
 export const Section = createBlock<ISection>({
-  name: 'Section',
+  name: 'Секция',
   type: BasicType.SECTION,
   create: (payload) => {
     const defaultData: ISection = {

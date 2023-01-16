@@ -5,27 +5,27 @@ import { SelectField } from '../../../components/Form';
 const options = [
   {
     value: '',
-    label: 'None',
+    label: 'Нет',
   },
   {
     value: 'underline',
-    label: 'Underline',
+    label: 'Подчеркнутый',
   },
   {
     value: 'overline',
-    label: 'Overline',
+    label: 'Подчеркнутый над текстом',
   },
   {
     value: 'line-through',
-    label: 'Line through',
+    label: 'Перечеркнутый',
   },
   {
     value: 'blink',
-    label: 'Blink',
+    label: 'Мерцающий',
   },
   {
     value: 'inherit',
-    label: 'Inherit',
+    label: 'Унаследованный',
   },
 ];
 
@@ -35,7 +35,7 @@ export function TextDecoration({ name }: { name?: string; }) {
   return useMemo(() => {
     return (
       <SelectField
-        label='Text decoration'
+        label='Оформление текста'
         name={name || `${focusIdx}.attributes.text-decoration`}
         options={options}
       />

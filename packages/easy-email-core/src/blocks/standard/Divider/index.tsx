@@ -17,8 +17,10 @@ export type IDivider = IBlockData<
   {}
 >;
 
+// const dividerName = `${t('Divider')}`;
 export const Divider = createBlock<IDivider>({
-  name: 'Divider',
+  // name: dividerName,
+  name: 'Разделитель',
   type: BasicType.DIVIDER,
   create: (payload) => {
     const defaultData: IDivider = {

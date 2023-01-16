@@ -93,14 +93,14 @@ export function ContextMenu({
           <TextStyle>Copy</TextStyle>
         </div>
         {props.onAddCollection && (
-            <div className={styles.listItem} onClick={handleAddToCollection}>
-              <IconFont iconName='icon-start' style={{ marginRight: 10 }} />{' '}
-              <TextStyle>Add to collection</TextStyle>
-            </div>
+          <div className={styles.listItem} onClick={handleAddToCollection}>
+            <IconFont iconName='icon-start' style={{ marginRight: 10 }} />{' '}
+            <TextStyle>Add to collection</TextStyle>
+          </div>
         )}
         <div className={styles.listItem} onClick={handleDelete}>
           <IconFont iconName='icon-delete' style={{ marginRight: 10 }} />{' '}
-          <TextStyle>Delete</TextStyle>
+          <TextStyle>Удалить</TextStyle>
         </div>
       </div>
       <div

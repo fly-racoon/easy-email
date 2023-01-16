@@ -49,8 +49,8 @@ export default createSliceState({
     },
     fetchDefaultTemplate: async state => {
       return {
-        subject: 'Welcome to Easy-email',
-        subTitle: 'Nice to meet you!',
+        subject: 'Добро пожаловать',
+        subTitle: 'Приятно познакомится!',
         content: BlockManager.getBlockByType(BasicType.PAGE).create({
           children: [BlockManager.getBlockByType(AdvancedType.WRAPPER).create()],
         }),
@@ -126,7 +126,7 @@ export default createSliceState({
         }
       }
     },
-    removeById: async (state, payload: { id: number; success: () => void }) => {
+    removeById: async (state, payload: { id: number; success: () => void; }) => {
       try {
         await article.deleteArticle(payload.id);
         payload.success();

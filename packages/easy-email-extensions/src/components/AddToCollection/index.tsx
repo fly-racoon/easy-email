@@ -46,7 +46,7 @@ export const AddToCollection: React.FC<{
           <Stack vertical>
             <Stack.Item />
             <TextField
-              label='Title'
+              label='Заголовок'
               name='label'
               validate={(val: string) => {
                 if (!val) return 'Title required!';

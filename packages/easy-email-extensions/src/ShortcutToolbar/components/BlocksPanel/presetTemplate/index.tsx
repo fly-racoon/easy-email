@@ -19,18 +19,18 @@ import { ColumnBlockItem } from './ColumnBlockItem';
 
 export const defaultCategories = [
   {
-    title: 'Content',
+    title: 'Содержимое',
     name: 'CONTENT',
     blocks: [
       {
         type: AdvancedType.TEXT,
-        title: 'Text',
+        title: 'Текст',
         description: 'This block allows you to display text in your email.',
         component: TextBlockItem,
       },
       {
         type: AdvancedType.IMAGE,
-        title: 'Image',
+        title: 'Изображение',
         description: (
           <Stack vertical spacing='none'>
             <TextStyle>
@@ -103,7 +103,7 @@ export const defaultCategories = [
     ],
   },
   {
-    title: 'Layout',
+    title: 'Макет',
     name: 'LAYOUT',
     blocks: [
       {
@@ -115,7 +115,7 @@ export const defaultCategories = [
       },
       {
         type: AdvancedType.SECTION,
-        title: 'Section',
+        title: 'Секция',
         description: (
           <Stack vertical spacing='none'>
             <TextStyle>
@@ -132,7 +132,7 @@ export const defaultCategories = [
       },
       {
         type: AdvancedType.GROUP,
-        title: 'Group',
+        title: 'Группа',
         description: `Group allows you to prevent columns from stacking on
           mobile. To do so, wrap the columns inside a group
           block, so they'll stay side by side on mobile.`,
@@ -140,7 +140,7 @@ export const defaultCategories = [
       },
       {
         type: AdvancedType.COLUMN,
-        title: 'Column',
+        title: 'Столбец',
         description: (
           <Stack vertical spacing='none'>
             <TextStyle>

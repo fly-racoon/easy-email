@@ -188,41 +188,41 @@ export function Tools(props: ToolsProps) {
         <ToolItem
           onClick={() => execCommand('justifyLeft')}
           icon={<IconFont iconName='icon-align-left' />}
-          title='Align left'
+          title='Выравнивание слева'
         />
         <ToolItem
           onClick={() => execCommand('justifyCenter')}
           icon={<IconFont iconName='icon-align-center' />}
-          title='Align center'
+          title='Выравнивание по центру'
         />
         <ToolItem
           onClick={() => execCommand('justifyRight')}
           icon={<IconFont iconName='icon-align-right' />}
-          title='Align right'
+          title='Выравнивание справа'
         />
         <div className='easy-email-extensions-divider' />
         <ToolItem
           onClick={() => execCommand('insertOrderedList')}
           icon={<IconFont iconName='icon-list-ol' />}
-          title='Orderlist'
+          title='Нумерованный список'
         />
         <ToolItem
           onClick={() => execCommand('insertUnorderedList')}
           icon={<IconFont iconName='icon-list-ul' />}
-          title='Unorderlist'
+          title='Маркированный список'
         />
         <div className='easy-email-extensions-divider' />
 
         <ToolItem
           onClick={() => execCommand('insertHorizontalRule')}
           icon={<IconFont iconName='icon-line' />}
-          title='Line'
+          title='Линия'
         />
         <div className='easy-email-extensions-divider' />
         <ToolItem
           onClick={() => execCommand('removeFormat')}
           icon={<IconFont iconName='icon-close' />}
-          title='Remove format'
+          title='Удалить форматирование'
         />
         <div className='easy-email-extensions-divider' />
       </div>

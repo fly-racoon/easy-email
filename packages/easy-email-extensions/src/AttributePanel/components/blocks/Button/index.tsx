@@ -35,12 +35,12 @@ export function Button() {
   return (
     <AttributesPanelWrapper>
       <CollapseWrapper defaultActiveKey={['-1', '0', '1', '2', '3']}>
-        <Collapse.Item name='-1' header='Setting'>
+        <Collapse.Item name='-1' header='Настройка'>
           <Space direction='vertical'>
             <TextField
               label={(
                 <Space>
-                  <span>Content</span>
+                  <span>Содержимое</span>
                   {mergeTags && (
                     <Popover
                       trigger='click'
@@ -65,7 +65,7 @@ export function Button() {
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='0' header='Dimension'>
+        <Collapse.Item name='0' header='Размер'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
@@ -76,28 +76,28 @@ export function Button() {
               </Grid.Col>
             </Grid.Row>
 
-            <Padding title='Padding' attributeName='padding' />
-            <Padding title='Inner padding' attributeName='inner-padding' />
+            <Padding title='Отступ' attributeName='padding' />
+            <Padding title='Внутренний Отступ' attributeName='inner-padding' />
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='1' header='Color'>
+        <Collapse.Item name='1' header='Цвет'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
-                <Color title='Text color' />
+                <Color title='Цвет текста' />
               </Grid.Col>
               <Grid.Col offset={1} span={11}>
-                <BackgroundColor title='Button color' />
+                <BackgroundColor title='Цвет кнопки' />
               </Grid.Col>
               <Grid.Col span={11}>
-                <ContainerBackgroundColor title='Background color' />
+                <ContainerBackgroundColor title='Цвет фона' />
               </Grid.Col>
             </Grid.Row>
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='2' header='Typography'>
+        <Collapse.Item name='2' header='Шрифт'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
@@ -131,10 +131,10 @@ export function Button() {
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='3' header='Border'>
+        <Collapse.Item name='3' header='Граница'>
           <Border />
         </Collapse.Item>
-        <Collapse.Item name='4' header='Extra'>
+        <Collapse.Item name='4' header='Дополнительно'>
           <Grid.Col span={24}>
             <ClassName />
           </Grid.Col>

@@ -86,7 +86,7 @@ export function Link(props: LinkProps) {
                   <SearchField
                     size='small'
                     name='link'
-                    label='Link'
+                    label='Ссылка'
                     labelHidden
                     searchButton='Apply'
                     placeholder='https://www.example.com'
@@ -113,7 +113,7 @@ export function Link(props: LinkProps) {
                       <TextStyle size='smallest'>Underline</TextStyle>
                       <SwitchField
                         size='small'
-                        label='Underline'
+                        label='Подчеркнутый'
                         labelHidden
                         name='underline'
                         checkedText='off'
@@ -126,7 +126,7 @@ export function Link(props: LinkProps) {
               </div>
             )}
           >
-            <ToolItem isActive={Boolean(initialValues.link)} title='Link' icon={<IconFont iconName='icon-link' />} />
+            <ToolItem isActive={Boolean(initialValues.link)} title='Ссылка' icon={<IconFont iconName='icon-link' />} />
           </Tooltip>
         );
       }}

@@ -13,7 +13,7 @@
     "lint": "lerna exec -- yarn format"
   },
   "dependencies": {
-    "easy-localized-translation": "^1.0.2",
+    "easy-localized-translation": "^1.0.3",
     "lerna": "^4.0.0",
     "liquidjs": "^9.34.1"
   },

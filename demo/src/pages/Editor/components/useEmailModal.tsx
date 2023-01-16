@@ -27,7 +27,7 @@ export function useEmailModal() {
   const emailSendLoading = useLoading(email.loadings.send);
 
   const onSendEmail = useCallback(
-    async (values: { toEmail: string; mergeTags: string }) => {
+    async (values: { toEmail: string; mergeTags: string; }) => {
       if (!emailData) return null;
 
       let mergeTagsPayload = {};
@@ -63,7 +63,7 @@ export function useEmailModal() {
           },
           success: () => {
             closeModal();
-            Message.success('Email send!');
+            Message.success('Email отправлен!');
           },
         })
       );
@@ -95,20 +95,20 @@ export function useEmailModal() {
         {({ handleSubmit }) => (
           <Modal
             style={{ zIndex: 9999 }}
-            title='Send test email'
-            okText='Send'
-            cancelText='Cancel'
+            title='Отправить тестовый email'
+            okText='Отправить'
+            cancelText='Отменить'
             visible={visible}
             confirmLoading={emailSendLoading}
             onOk={() => handleSubmit()}
             onCancel={closeModal}
           >
-            <TextField autoFocus name='toEmail' label='To email' />
+            <TextField autoFocus name='toEmail' label='Email:' />
             <TextAreaField
               rows={15}
               autoFocus
               name='mergeTags'
-              label='Dynamic data'
+              label='Данные:'
             />
           </Modal>
         )}

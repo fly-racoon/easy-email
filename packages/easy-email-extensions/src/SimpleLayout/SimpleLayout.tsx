@@ -69,7 +69,7 @@ export const SimpleLayout: React.FC<
               }}
             >
               <Card
-                title='Layout'
+                title='Макет'
                 style={{ border: 'none' }}
                 headerStyle={{ height: 50 }}
               >

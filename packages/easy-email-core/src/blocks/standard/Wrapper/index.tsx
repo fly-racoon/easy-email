@@ -20,7 +20,7 @@ export type IWrapper = IBlockData<
 >;
 
 export const Wrapper = createBlock<IWrapper>({
-  name: 'Wrapper',
+  name: 'Обёртка',
   type: BasicType.WRAPPER,
   create: (payload) => {
     const defaultData: IWrapper = {

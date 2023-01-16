@@ -35,14 +35,14 @@ export type IButton = IBlockData<
 >;
 
 export const Button = createBlock<IButton>({
-  name: 'Button',
+  name: 'Кнопка',
   type: BasicType.BUTTON,
   create: (payload) => {
     const defaultData: IButton = {
       type: BasicType.BUTTON,
       data: {
         value: {
-          content: 'Button',
+          content: 'Кнопка',
         },
       },
       attributes: {

@@ -5,35 +5,35 @@ import { SelectField } from '../../../components/Form';
 export const borderStyleOptions = [
   {
     value: 'dashed',
-    label: 'Dashed',
+    label: 'Пунктир с отрезками',
   },
   {
     value: 'dotted',
-    label: 'Dotted',
+    label: 'Пунктир с точками',
   },
   {
     value: 'solid',
-    label: 'Solid',
+    label: 'Непрерывнй',
   },
   {
     value: 'double',
-    label: 'double',
+    label: 'Двойной',
   },
   {
     value: 'ridge',
-    label: 'ridge',
+    label: 'Кромка',
   },
   {
     value: 'groove',
-    label: 'groove',
+    label: 'Выемка',
   },
   {
     value: 'inset',
-    label: 'inset',
+    label: 'Вкладка',
   },
   {
     value: 'outset',
-    label: 'outset',
+    label: 'Боковик',
   },
 ];
 
@@ -43,7 +43,7 @@ export function BorderStyle() {
   return useMemo(() => {
     return (
       <SelectField
-        label='Style'
+        label='Стиль'
         name={`${focusIdx}.attributes.border-style`}
         options={borderStyleOptions}
       />

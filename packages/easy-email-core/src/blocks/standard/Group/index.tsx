@@ -15,7 +15,7 @@ export type IGroup = IBlockData<{
 }>;
 
 export const Group: IBlock<IGroup> = createBlock({
-  name: 'Group',
+  name: 'Группа',
   type: BasicType.GROUP,
   create: (payload) => {
     const defaultData: IGroup = {

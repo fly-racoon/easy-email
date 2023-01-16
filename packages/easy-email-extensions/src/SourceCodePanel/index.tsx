@@ -103,7 +103,7 @@ export function SourceCodePanel() {
     <Collapse>
       <Collapse.Item
         name='json'
-        header='Json source'
+        header={t('Json source')}
         contentStyle={{ padding: '8px 13px' }}
       >
         <Input.TextArea
@@ -115,7 +115,7 @@ export function SourceCodePanel() {
       </Collapse.Item>
       <Collapse.Item
         name='mjml'
-        header='MJML source'
+        header={t('MJML source')}
         contentStyle={{ padding: '8px 13px' }}
       >
         <Input.TextArea

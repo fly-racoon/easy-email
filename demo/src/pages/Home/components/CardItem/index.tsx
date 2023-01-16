@@ -61,9 +61,9 @@ export function CardItem(props: CardItemProps) {
       style={{ backgroundImage: `url(${data.picture})` }}
     >
       <div className={styles.bottom}>
-        <div className={styles.title}>Title: {data.title}</div>
+        <div className={styles.title}>Заголовок: {data.title}</div>
         <div className={styles.title}>
-          Date {dayjs(data.created_at * 1000).format('YYYY-MM-DD')}
+          Дата {dayjs(data.created_at * 1000).format('YYYY-MM-DD')}
         </div>
       </div>
       <div className={styles.mask}>
@@ -81,7 +81,7 @@ export function CardItem(props: CardItemProps) {
                 cancelText='Cancel'
               >
                 <IconDelete />
-                &nbsp;Delete
+                &nbsp;Удалить
               </Popconfirm>
             </div>
             <div className={styles.listItem}>
@@ -89,18 +89,18 @@ export function CardItem(props: CardItemProps) {
                 to={`/editor?id=${data.article_id}&userId=${data.user_id}`}
                 onClick={() =>
                   pushEvent({
-                    event: 'Edit',
+                    event: 'Редактировать',
                     payload: { article_id: data.article_id, title: data.title },
                   })
                 }
               >
                 <IconEdit />
-                &nbsp;Edit
+                &nbsp;Редактировать
               </Link>
             </div>
             <div className={styles.listItem}>
               <Link to='javascript:void(0)' onClick={onDuplicate}>
-                Duplicate
+                Дублировать
               </Link>
             </div>
           </div>

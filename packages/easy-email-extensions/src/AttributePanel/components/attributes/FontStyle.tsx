@@ -5,11 +5,11 @@ import { RadioGroupField } from '../../../components/Form';
 const options = [
   {
     value: 'normal',
-    label: 'Normal',
+    label: 'Обычный',
   },
   {
     value: 'italic',
-    label: 'Italic',
+    label: 'Курсив',
   },
 ];
 
@@ -18,7 +18,7 @@ export function FontStyle({ name }: { name?: string; }) {
 
   return (
     <RadioGroupField
-      label='Font style'
+      label='Стиль шрифта'
       name={name || `${focusIdx}.attributes.font-style`}
       options={options}
     />

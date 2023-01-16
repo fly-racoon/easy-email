@@ -27,14 +27,14 @@ export type IText = IBlockData<
 >;
 
 export const Text = createBlock<IText>({
-  name: 'Text',
+  name: 'Текст',
   type: BasicType.TEXT,
   create: (payload) => {
     const defaultData: IText = {
       type: BasicType.TEXT,
       data: {
         value: {
-          content: 'Make it easy for everyone to compose emails!',
+          content: 'Делаем так, чтобы всем было легко составлять электронные письма!',
         },
       },
       attributes: {

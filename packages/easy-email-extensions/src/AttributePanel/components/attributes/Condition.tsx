@@ -109,8 +109,8 @@ export function Condition() {
       }}
       className='condition'
       destroyOnHide
-      name='Condition'
-      header='Condition'
+      name='Условие'
+      header='Условие'
       extra={(
         <div style={{ marginRight: 10 }}>
           <Switch checked={condition?.enabled} onChange={onConditionToggle} />
@@ -127,14 +127,14 @@ export function Condition() {
                 <Grid.Col span={16}>
                   {condition.groups.length > 1 && (
                     <SelectField inline name={`${focusIdx}.data.value.condition.symbol`}
-                      label="Symbol"
+                      label="Символ"
                       options={[
                         {
-                          label: 'And',
+                          label: 'Логическое И',
                           value: OperatorSymbol.AND
                         },
                         {
-                          label: 'Or',
+                          label: 'Логическое ИЛИ',
                           value: OperatorSymbol.OR
                         },
                       ]}
@@ -155,14 +155,14 @@ export function Condition() {
                           {
                             group.groups.length > 1 && (
                               <SelectField inline name={`${focusIdx}.data.value.condition.symbol`}
-                                label="Symbol"
+                                label="Символ"
                                 options={[
                                   {
-                                    label: 'And',
+                                    label: 'Логическое И',
                                     value: OperatorSymbol.AND
                                   },
                                   {
-                                    label: 'Or',
+                                    label: 'Логическое ИЛИ',
                                     value: OperatorSymbol.OR
                                   },
                                 ]}
@@ -208,8 +208,8 @@ function ConditionItem({ path, onDelete, gIndex, ggIndex }: { path: string; gInd
 
   return (
     <Grid.Row align='end'>
-      <Grid.Col span={7}> <TextField label="Variable path" name={`${name}.left`} /></Grid.Col>
-      <Grid.Col span={7}> <SelectField label="Operator" name={`${name}.operator`} options={options} /></Grid.Col>
+      <Grid.Col span={7}> <TextField label="Путь переменной" name={`${name}.left`} /></Grid.Col>
+      <Grid.Col span={7}> <SelectField label="Оператор" name={`${name}.operator`} options={options} /></Grid.Col>
       <Grid.Col span={7}> {!hideRight && <TextField label="Right" name={`${name}.right`} />}</Grid.Col>
       <Grid.Col span={3}>
         <Button onClick={() => onDelete(path, gIndex, ggIndex)} icon={<IconDelete />} />

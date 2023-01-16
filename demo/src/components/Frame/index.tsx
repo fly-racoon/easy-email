@@ -87,8 +87,8 @@ export default function Frame({
             defaultOpenKeys={['sub1']}
             style={{ height: '100%', borderRight: 0 }}
           >
-            <SubMenu key='sub1' title='Templates'>
-              <Menu.Item key='1'>Templates</Menu.Item>
+            <SubMenu key='sub1' title='Шаблоны'>
+              <Menu.Item key='1'>Шаблоны</Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>

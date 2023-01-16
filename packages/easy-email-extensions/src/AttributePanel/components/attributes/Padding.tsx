@@ -12,7 +12,7 @@ export interface PaddingProps {
   name?: string;
 }
 export function Padding(props: PaddingProps = {}) {
-  const { title = 'Padding', attributeName = 'padding', name } = props;
+  const { title = 'Отступ', attributeName = 'padding', name } = props;
   const { focusBlock, change, values } = useBlock();
   const { focusIdx } = useFocusIdx();
 
@@ -81,19 +81,19 @@ export function Padding(props: PaddingProps = {}) {
 
               <Grid.Row>
                 <Grid.Col span={11}>
-                  <InputWithUnitField label='Top' name='top' />
+                  <InputWithUnitField label='Верхний' name='top' />
                 </Grid.Col>
                 <Grid.Col offset={1} span={11}>
-                  <InputWithUnitField label='Left' name='left' />
+                  <InputWithUnitField label='Левый' name='left' />
                 </Grid.Col>
               </Grid.Row>
 
               <Grid.Row>
                 <Grid.Col span={11}>
-                  <InputWithUnitField label='Bottom' name='bottom' />
+                  <InputWithUnitField label='Нижний' name='bottom' />
                 </Grid.Col>
                 <Grid.Col offset={1} span={11}>
-                  <InputWithUnitField label='Right' name='right' />
+                  <InputWithUnitField label='Правый' name='right' />
                 </Grid.Col>
               </Grid.Row>
             </Stack>

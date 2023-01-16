@@ -20,7 +20,7 @@ export function Panel() {
           name={`${focusIdx}.data.value.quantity`}
         />
         <TextField
-          label='Title'
+          label='Заголовок'
           name={`${focusIdx}.data.value.title`}
           inline
           alignment='center'
@@ -32,7 +32,7 @@ export function Panel() {
           alignment='center'
         />
         <ColorPickerField
-          label='Background color'
+          label='Цвет фона'
           name={`${focusIdx}.attributes.background-color`}
           inline
           alignment='center'
@@ -56,7 +56,7 @@ export function Panel() {
           alignment='center'
         />
         <ColorPickerField
-          label='Button color'
+          label='Цвет кнопки'
           name={`${focusIdx}.attributes.button-color`}
           inline
           alignment='center'

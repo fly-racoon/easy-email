@@ -7,7 +7,7 @@ export function FontSize() {
 
   return (
     <InputWithUnitField
-      label='Font size'
+      label='Размер шрифта'
       name={`${focusIdx}.attributes.font-size`}
     />
   );

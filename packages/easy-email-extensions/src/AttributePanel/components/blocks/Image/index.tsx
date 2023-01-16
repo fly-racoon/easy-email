@@ -25,7 +25,7 @@ export function Image() {
       <CollapseWrapper defaultActiveKey={['0', '1', '2', '3', '4']}>
         <Collapse.Item
           name='1'
-          header='Setting'
+          header='Настройка'
         >
           <Stack
             vertical
@@ -35,11 +35,11 @@ export function Image() {
               label='src'
               labelHidden
               name={`${focusIdx}.attributes.src`}
-              helpText='The image suffix should be .jpg, jpeg, png, gif, etc. Otherwise, the picture may not be displayed normally.'
+              helpText='Расширение изображения должно быть .jpg, jpeg, png, gif и т.д. В противном случае изображение может отображаться некорректно.'
               uploadHandler={onUploadImage}
             />
             <ColorPickerField
-              label='Background color'
+              label='Цвет фона'
               name={`${focusIdx}.attributes.container-background-color`}
               inline
             />
@@ -48,7 +48,7 @@ export function Image() {
 
         <Collapse.Item
           name='0'
-          header='Dimension'
+          header='Размер'
         >
           <Space direction='vertical'>
             <Grid.Row>
@@ -74,7 +74,7 @@ export function Image() {
 
         <Collapse.Item
           name='2'
-          header='Link'
+          header='Ссылка'
         >
           <Stack
             vertical
@@ -86,19 +86,19 @@ export function Image() {
 
         <Collapse.Item
           name='3'
-          header='Border'
+          header='Граница'
         >
           <Border />
         </Collapse.Item>
 
         <Collapse.Item
           name='4'
-          header='Extra'
+          header='Дополнительно'
         >
           <Grid.Row>
             <Grid.Col span={11}>
               <TextField
-                label='title'
+                label='заголовок'
                 name={`${focusIdx}.attributes.title`}
               />
             </Grid.Col>
@@ -107,14 +107,14 @@ export function Image() {
               span={11}
             >
               <TextField
-                label='alt'
+                label='альтернативный текст'
                 name={`${focusIdx}.attributes.alt`}
               />
             </Grid.Col>
           </Grid.Row>
           <Grid.Col span={24}>
             <TextField
-              label='class name'
+              label='имя класса'
               name={`${focusIdx}.attributes.css-class`}
             />
           </Grid.Col>

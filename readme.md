@@ -80,8 +80,8 @@ import 'easy-email-extensions/lib/style.css';
 import '@arco-themes/react-easy-email-theme/css/arco.css';
 
 const initialValues = {
-  subject: 'Welcome to Easy-email',
-  subTitle: 'Nice to meet you!',
+  subject: 'Добро пожаловать',
+  subTitle: 'Приятно познакомится!',
   content: BlockManager.getBlockByType(BasicType.PAGE)!.create({}),
 };
 
