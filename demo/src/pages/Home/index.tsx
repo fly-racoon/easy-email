@@ -20,7 +20,7 @@ export default function Home() {
 
   return (
     <Frame
-      title='Templates'
+      title='Шаблоны'
       primaryAction={
         <Button
           onClick={() => {
@@ -28,7 +28,7 @@ export default function Home() {
             history.push('/editor');
           }}
         >
-          Add
+          Добавить
         </Button>
       }
     >

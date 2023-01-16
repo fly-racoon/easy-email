@@ -30,11 +30,11 @@ import { CollapseWrapper } from '../../attributes/CollapseWrapper';
 const options = [
   {
     value: 'vertical',
-    label: 'vertical',
+    label: 'вертикальный',
   },
   {
     value: 'horizontal',
-    label: 'horizontal',
+    label: 'горизонтальный',
   },
 ];
 
@@ -47,10 +47,10 @@ export function Social() {
   return (
     <AttributesPanelWrapper style={{ padding: 0 }}>
       <CollapseWrapper defaultActiveKey={['0', '1', '2', '3']}>
-        <Collapse.Item name='1' header='Setting'>
+        <Collapse.Item name='1' header='Настройка'>
           <Space direction='vertical'>
             <RadioGroupField
-              label='Mode'
+              label='Режим'
               name={`${focusIdx}.attributes.mode`}
               options={options}
             />
@@ -60,7 +60,7 @@ export function Social() {
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='3' header='Typography'>
+        <Collapse.Item name='3' header='Шрифт'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
@@ -84,7 +84,7 @@ export function Social() {
               </Grid.Col>
               <Grid.Col offset={1} span={11}>
 
-                <ContainerBackgroundColor title='Background color' />
+                <ContainerBackgroundColor title='Цвет фона' />
               </Grid.Col>
             </Grid.Row>
             <Grid.Row>
@@ -101,7 +101,7 @@ export function Social() {
 
         <Collapse.Item
           name='2'
-          header='Social item'
+          header='Социальный элемент'
           contentStyle={{ padding: 10 }}
         >
 
@@ -116,32 +116,32 @@ export function Social() {
           />
         </Collapse.Item>
 
-        <Collapse.Item name='0' header='Dimension'>
+        <Collapse.Item name='0' header='Размер'>
 
           <Space direction="vertical" size="large">
 
             <Grid.Row>
               <Grid.Col span={11}>
                 <InputWithUnitField
-                  label='Icon width'
+                  label='Ширина изображения'
                   name={`${focusIdx}.attributes.icon-size`}
                 />
               </Grid.Col>
               <Grid.Col offset={1} span={11}>
                 <TextField
-                  label='Border radius'
+                  label='Радиус границы'
                   name={`${focusIdx}.attributes.border-radius`}
                 />
               </Grid.Col>
             </Grid.Row>
 
             <Padding />
-            <Padding attributeName='inner-padding' title='Icon padding' />
-            <Padding attributeName='text-padding' title='Text padding' />
+            <Padding attributeName='inner-padding' title='Отступ изображения' />
+            <Padding attributeName='text-padding' title='Отступ текста' />
           </Space>
 
         </Collapse.Item>
-        <Collapse.Item name='4' header='Extra'>
+        <Collapse.Item name='4' header='Дополнительно'>
           <Grid.Col span={24}>
             <ClassName />
           </Grid.Col>
@@ -173,7 +173,7 @@ function SocialElement({
   return (
     <Space direction='vertical'>
       <ImageUploaderField
-        label='Image'
+        label='Изображение'
         autoCompleteOptions={autoCompleteOptions}
         labelHidden
         name={`${focusIdx}.data.value.elements.[${index}].src`}
@@ -184,7 +184,7 @@ function SocialElement({
       <Grid.Row>
         <Grid.Col span={11}>
           <TextField
-            label='Content'
+            label='Содержимое'
             name={`${focusIdx}.data.value.elements.[${index}].content`}
             quickchange
           />
@@ -192,7 +192,7 @@ function SocialElement({
         <Grid.Col offset={1} span={11}>
           <TextField
             prefix={<IconLink />}
-            label='Link'
+            label='Ссылка'
             name={`${focusIdx}.data.value.elements.[${index}].href`}
           />
         </Grid.Col>
@@ -200,7 +200,7 @@ function SocialElement({
       {/* <Grid.Row>
         <Grid.Col span={11}>
           <InputWithUnitField
-            label='Icon width'
+            label='Ширина изображения'
             name={`${focusIdx}.data.value.elements.[${index}].icon-size`}
           />
         </Grid.Col>

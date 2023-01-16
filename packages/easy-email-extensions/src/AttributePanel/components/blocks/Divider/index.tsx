@@ -17,7 +17,7 @@ export function Divider() {
   return (
     <AttributesPanelWrapper>
       <CollapseWrapper defaultActiveKey={['-1', '0', '1', '2', '3']}>
-        <Collapse.Item name='1' header='Dimension'>
+        <Collapse.Item name='1' header='Размер'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
@@ -31,7 +31,7 @@ export function Divider() {
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='2' header='Border'>
+        <Collapse.Item name='2' header='Граница'>
           <Stack wrap={false} spacing='tight'>
             <div style={{ width: 50 }}>
               <BorderWidth />
@@ -45,15 +45,15 @@ export function Divider() {
           </Stack>
         </Collapse.Item>
 
-        <Collapse.Item name='3' header='Background'>
+        <Collapse.Item name='3' header='Фон'>
           <Grid.Row>
             <Grid.Col span={11}>
-              <ContainerBackgroundColor title='Background' />
+              <ContainerBackgroundColor title='Фон' />
             </Grid.Col>
             <Grid.Col offset={1} span={11} />
           </Grid.Row>
         </Collapse.Item>
-        <Collapse.Item name='4' header='Extra'>
+        <Collapse.Item name='4' header='Дополнительно'>
           <Grid.Col span={24}>
             <ClassName />
           </Grid.Col>

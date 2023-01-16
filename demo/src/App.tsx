@@ -35,7 +35,7 @@ function App() {
                   color: 'rgba(0, 0, 0, 0.65)',
                 }}
               >
-                Please wait a moment.
+                Пожалуйста подождите.
               </p>
             </div>
           }

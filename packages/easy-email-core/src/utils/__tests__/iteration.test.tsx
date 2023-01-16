@@ -31,7 +31,7 @@ describe('Test iteration.test', () => {
 
   const iterationOption = {
     enabled: true,
-    itemName: 'item',
+    itemName: 'элемент',
     dataSource: 'list',
     limit: 999,
     mockQuantity: 1

@@ -40,15 +40,15 @@ export function BasicTools() {
 
   return (
     <div style={{ marginRight: 40 }}>
-      <span style={{ position: 'relative', marginRight: 10, color: '#fff', fontFamily: '-apple-system, BlinkMacSystemFont, San Francisco, Segoe UI' }}>Text</span>
+      <span style={{ position: 'relative', marginRight: 10, color: '#fff', fontFamily: '-apple-system, BlinkMacSystemFont, San Francisco, Segoe UI' }}>Текст</span>
       <ToolItem
         onClick={handleSelectParent}
-        title='Select parent block'
+        title='Выбрать родительский блок'
         icon={<IconFont iconName='icon-back-parent' />}
       />
       <ToolItem
         onClick={handleCopy}
-        title='Copy'
+        title='Копировать'
         icon={<IconFont iconName='icon-copy' />}
       />
       {
@@ -62,7 +62,7 @@ export function BasicTools() {
       }
       <ToolItem
         onClick={handleDelete}
-        title='Delete'
+        title='Удалить'
         icon={<IconFont iconName='icon-delete' />}
       />
       {modal}

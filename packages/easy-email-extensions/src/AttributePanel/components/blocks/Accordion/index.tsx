@@ -48,7 +48,7 @@ export function Accordion() {
   return (
     <AttributesPanelWrapper>
       <CollapseWrapper defaultActiveKey={['0', '1', '2']}>
-        <Collapse.Item name='0' header='Setting'>
+        <Collapse.Item name='0' header='Настройка'>
           <Space direction='vertical'>
             <Grid.Row>
               <Grid.Col span={11}>
@@ -64,7 +64,7 @@ export function Accordion() {
             <Grid.Row>
               <Grid.Col span={11}>
                 <InputWithUnitField
-                  label='Icon width'
+                  label='Ширина изображения'
                   name={`${focusIdx}.attributes.icon-width`}
                 />
               </Grid.Col>
@@ -115,7 +115,7 @@ export function Accordion() {
             <TextField label='border' name={`${focusIdx}.attributes.border`} />
           </Space>
         </Collapse.Item>
-        <Collapse.Item name='4' header='Extra'>
+        <Collapse.Item name='4' header='Дополнительно'>
           <Grid.Col span={24}>
             <ClassName />
           </Grid.Col>

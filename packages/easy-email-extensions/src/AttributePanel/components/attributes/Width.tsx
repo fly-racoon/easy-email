@@ -33,7 +33,7 @@ export function Width({
   return (
     <InputWithUnitField
       validate={validate}
-      label='Width'
+      label='Ширина'
       inline={inline}
       name={`${focusIdx}.attributes.width`}
       unitOptions={unitOptions}

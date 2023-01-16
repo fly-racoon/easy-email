@@ -62,7 +62,7 @@ console.log(localesData);
 
 const defaultCategories: ExtensionProps['categories'] = [
   {
-    label: 'Content',
+    label: 'Содержимое',
     active: true,
     blocks: [
       {
@@ -93,12 +93,12 @@ const defaultCategories: ExtensionProps['categories'] = [
     ],
   },
   {
-    label: 'Layout',
+    label: 'Макет',
     active: true,
     displayType: 'column',
     blocks: [
       {
-        title: '2 columns',
+        title: '2 cтолбца',
         payload: [
           ['50%', '50%'],
           ['33%', '67%'],
@@ -108,7 +108,7 @@ const defaultCategories: ExtensionProps['categories'] = [
         ],
       },
       {
-        title: '3 columns',
+        title: '3 cтолбца',
         payload: [
           ['33.33%', '33.33%', '33.33%'],
           ['25%', '25%', '50%'],
@@ -116,13 +116,13 @@ const defaultCategories: ExtensionProps['categories'] = [
         ],
       },
       {
-        title: '4 columns',
+        title: '4 cтолбца',
         payload: [['25%', '25%', '25%', '25%']],
       },
     ],
   },
   {
-    label: 'Custom',
+    label: 'Составной блок',
     active: true,
     displayType: 'custom',
     blocks: [
@@ -188,7 +188,7 @@ export default function Editor() {
   const dispatch = useDispatch();
   const history = useHistory();
   const templateData = useAppSelector('template');
-  const [locale, setLocale] = useState('en');
+  const [locale, setLocale] = useState('ru');
   const { addCollection, removeCollection, collectionCategory } = useCollection();
 
   const { width } = useWindowSize();
@@ -282,7 +282,7 @@ export default function Editor() {
     ).html;
 
     copy(html);
-    Message.success('Copied to pasteboard!');
+    Message.success('Скопировано в формате HTML');
   };
 
   const onExportMJML = (values: IEmailTemplate) => {
@@ -295,7 +295,7 @@ export default function Editor() {
 
     copy(html);
     pushEvent({ event: 'MJMLExport', payload: { values, mergeTags } });
-    Message.success('Copied to pasteboard!');
+    Message.success('Скопировано в формате MJML');
   };
 
   const initialValues: IEmailTemplate | null = useMemo(() => {
@@ -321,7 +321,7 @@ export default function Editor() {
         );
 
         if (!isChanged) {
-          Message.success('Updated success!');
+          Message.success('Изменения сохранены!');
           form.restart(values);
           return;
         }
@@ -330,7 +330,7 @@ export default function Editor() {
             id: +id,
             template: values,
             success() {
-              Message.success('Updated success!');
+              Message.success('Изменения сохранены!');
               form.restart(values);
             },
           }),
@@ -409,7 +409,7 @@ export default function Editor() {
               <PageHeader
                 style={{ background: 'var(--color-bg-2)' }}
                 backIcon
-                title='Edit'
+                title='Редактировать'
                 onBack={() => history.push('/')}
                 extra={
                   <Stack alignment='center'>
@@ -424,35 +424,36 @@ export default function Editor() {
                       onChange={onChangeTheme}
                       value={theme}
                     >
-                      <Select.Option value='blue'>Blue</Select.Option>
-                      <Select.Option value='green'>Green</Select.Option>
-                      <Select.Option value='purple'>Purple</Select.Option>
+                      <Select.Option value='blue'>Голубой</Select.Option>
+                      <Select.Option value='green'>Зеленый</Select.Option>
+                      <Select.Option value='purple'>Фиолетовый</Select.Option>
                     </Select>
                     <Select
                       onChange={setLocale}
                       value={locale}
                     >
+                      <Select.Option value='ru'>{t('Russian')}</Select.Option>
                       <Select.Option value='en'>English</Select.Option>
                       <Select.Option value='zh-Hans'>中文简体</Select.Option>
                       <Select.Option value='ja'>Japanese</Select.Option>
                       <Select.Option value='it'>Italian</Select.Option>
                     </Select>
 
-                    <Button onClick={openMergeTagsModal}>Update mergeTags</Button>
+                    <Button onClick={openMergeTagsModal}>Обновить теги слияния</Button>
 
-                    <Button onClick={() => onExportMJML(values)}>Export MJML</Button>
+                    <Button onClick={() => onExportMJML(values)}>Экспорт MJML</Button>
 
-                    <Button onClick={() => onExportHtml(values)}>Export html</Button>
+                    <Button onClick={() => onExportHtml(values)}>Экспорт HTML</Button>
 
                     <Button onClick={() => openModal(values, mergeTags)}>
-                      Send test email
+                      Отправить тестовый email
                     </Button>
                     <Button
                       loading={isSubmitting}
                       type='primary'
                       onClick={() => submit()}
                     >
-                      Save
+                      Сохранить
                     </Button>
                     <a
                       target='_blank'

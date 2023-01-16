@@ -28,7 +28,7 @@ import 'easy-email-extensions/lib/style.css';
 
 const categories: ExtensionProps['categories'] = [
   {
-    label: 'Content',
+    label: 'Содержимое',
     active: true,
     blocks: [
       {
@@ -59,12 +59,12 @@ const categories: ExtensionProps['categories'] = [
     ],
   },
   {
-    label: 'Layout',
+    label: 'Макет',
     active: true,
     displayType: 'column',
     blocks: [
       {
-        title: '2 columns',
+        title: '2 cтолбца',
         payload: [
           ['50%', '50%'],
           ['33%', '67%'],
@@ -74,7 +74,7 @@ const categories: ExtensionProps['categories'] = [
         ],
       },
       {
-        title: '3 columns',
+        title: '3 cтолбца',
         payload: [
           ['33.33%', '33.33%', '33.33%'],
           ['25%', '25%', '50%'],
@@ -82,7 +82,7 @@ const categories: ExtensionProps['categories'] = [
         ],
       },
       {
-        title: '4 columns',
+        title: '4 cтолбца',
         payload: [[['25%', '25%', '25%', '25%']]],
       },
     ],
@@ -90,8 +90,8 @@ const categories: ExtensionProps['categories'] = [
 ];
 
 const initialValues = {
-  subject: 'Welcome to Easy-email',
-  subTitle: 'Nice to meet you!',
+  subject: 'Добро пожаловать',
+  subTitle: 'Приятно познакомится!',
   content: BlockManager.getBlockByType(BasicType.PAGE)!.create({}),
 };
 
@@ -169,12 +169,12 @@ export default function App() {
 
     BlockMarketManager.addCategories([
       {
-        title: 'Custom',
+        title: 'Составной блок',
         name: 'custom',
         blocks: [
           {
             type: BasicType.TEXT,
-            title: 'Text',
+            title: 'Текст',
             description: 'This block allows you to display text in your email.',
             component: () => {
               return (

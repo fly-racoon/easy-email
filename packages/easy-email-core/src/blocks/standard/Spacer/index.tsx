@@ -12,7 +12,7 @@ export type ISpacer = IBlockData<{
 }>;
 
 export const Spacer: IBlock<ISpacer> = createBlock({
-  name: 'Spacer',
+  name: 'Пробел',
   type: BasicType.SPACER,
   create: (payload) => {
     const defaultData: ISpacer = {

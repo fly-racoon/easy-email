@@ -12,19 +12,19 @@ import { Grid, Space } from '@arco-design/web-react';
 const backgroundRepeatOptions = [
   {
     value: 'no-repeat',
-    label: 'No repeat',
+    label: 'Не повторять',
   },
   {
     value: 'repeat',
-    label: 'Repeat',
+    label: 'Повторять',
   },
   {
     value: 'repeat-x',
-    label: 'Repeat X',
+    label: 'Повторять по горизонтали',
   },
   {
     value: 'repeat-y',
-    label: 'Repeat Y',
+    label: 'Повторять по вертикали',
   },
 ];
 
@@ -35,9 +35,9 @@ export function Background() {
     return (
       <Space key={focusIdx} direction='vertical'>
         <ImageUploaderField
-          label='Background image'
+          label='Фоновое изображение'
           name={`${focusIdx}.attributes.background-url`}
-          helpText='The image suffix should be .jpg, jpeg, png, gif, etc. Otherwise, the picture may not be displayed normally.'
+          helpText='Расширение изображения должно быть .jpg, jpeg, png, gif и т.д. В противном случае изображение может отображаться некорректно.'
           uploadHandler={onUploadImage}
         />
 
@@ -47,14 +47,14 @@ export function Background() {
           </Grid.Col>
           <Grid.Col offset={1} span={11}>
             <SelectField
-              label='Background repeat'
+              label='Повторение фона'
               name={`${focusIdx}.attributes.background-repeat`}
               options={backgroundRepeatOptions}
             />
           </Grid.Col>
         </Grid.Row>
         <TextField
-          label='Background size'
+          label='Размер фона'
           name={`${focusIdx}.attributes.background-size`}
         />
       </Space>

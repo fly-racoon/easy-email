@@ -35,7 +35,7 @@ export function Carousel() {
       <CollapseWrapper defaultActiveKey={['0', '1', '2', '3', '4']}>
         <Collapse.Item
           name='0'
-          header='Dimension'
+          header='Размер'
         >
           <Space direction='vertical'>
             <InputWithUnitField
@@ -106,7 +106,7 @@ export function Carousel() {
           <Grid.Row>
             <Grid.Col span={11}>
               <InputWithUnitField
-                label='Icon width'
+                label='Ширина изображения'
                 name={`${focusIdx}.attributes.icon-width`}
               />
             </Grid.Col>
@@ -119,7 +119,7 @@ export function Carousel() {
 
         <Collapse.Item
           name='1'
-          header='Border'
+          header='Граница'
         >
           <Grid.Row>
             <Grid.Col span={11}>
@@ -158,7 +158,7 @@ export function Carousel() {
         </Collapse.Item>
         <Collapse.Item
           name='4'
-          header='Extra'
+          header='Дополнительно'
         >
           <Grid.Col span={24}>
             <ClassName />
@@ -181,10 +181,10 @@ function CarouselImage({
   return (
     <Space direction='vertical'>
       <ImageUploaderField
-        label='Image'
+        label='Изображение'
         labelHidden
         name={`${focusIdx}.data.value.images.[${index}].src`}
-        helpText='The image suffix should be .jpg, jpeg, png, gif, etc. Otherwise, the picture may not be displayed normally.'
+        helpText='Расширение изображения должно быть .jpg, jpeg, png, gif и т.д. В противном случае изображение может отображаться некорректно.'
         uploadHandler={onUploadImage}
       />
       <Grid.Row>
@@ -217,7 +217,7 @@ function CarouselImage({
       </Grid.Row>
 
       <TextField
-        label='Title'
+        label='Заголовок'
         name={`${focusIdx}.data.value.image.[${index}].title`}
       />
     </Space>

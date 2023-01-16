@@ -25,7 +25,7 @@ export type IImage = IBlockData<{
 }>;
 
 export const Image: IBlock<IImage> = createBlock({
-  name: 'Image',
+  name: 'Изображение',
   type: BasicType.IMAGE,
   create: (payload) => {
     const defaultData: IImage = {

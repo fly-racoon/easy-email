@@ -23,7 +23,7 @@ export type IColumn = IBlockData<
 >;
 
 export const Column = createBlock<IColumn>({
-  name: 'Column',
+  name: 'Столбец',
   type: BasicType.COLUMN,
   create: (payload) => {
     const defaultData: IColumn = {

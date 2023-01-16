@@ -5,11 +5,11 @@ import { SelectField, TextField } from '../../../components/Form';
 const options = [
   {
     value: 'normal',
-    label: 'Normal',
+    label: 'Обычный',
   },
   {
     value: 'bold',
-    label: 'Bold',
+    label: 'Полужирный',
   },
   {
     value: '100',
@@ -55,7 +55,7 @@ export function FontWeight({ name }: { name?: string; }) {
   return useMemo(() => {
     return (
       <SelectField
-        label='Font weight'
+        label='Начертание шрифта'
         name={name || `${focusIdx}.attributes.font-weight`}
         options={options}
       />

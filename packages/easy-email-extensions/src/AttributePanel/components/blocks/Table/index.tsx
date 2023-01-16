@@ -21,7 +21,7 @@ export function Table() {
   return (
     <AttributesPanelWrapper
       extra={(
-        <Tooltip content='Edit'>
+        <Tooltip content='Редактировать'>
           <Button
             onClick={() => setVisible(true)}
             icon={<IconFont iconName='icon-html' />}
@@ -30,7 +30,7 @@ export function Table() {
       )}
     >
       <CollapseWrapper defaultActiveKey={['-1', '0', '1', '2', '3']}>
-        <Collapse.Item name='1' header='Dimension'>
+        <Collapse.Item name='1' header='Размер'>
           <Stack>
             <Width />
             <Stack.Item />
@@ -46,7 +46,7 @@ export function Table() {
           <Border />
         </Collapse.Item>
 
-        <Collapse.Item name='2' header='Typography'>
+        <Collapse.Item name='2' header='Шрифт'>
           <Stack>
             <FontFamily />
             <FontSize />

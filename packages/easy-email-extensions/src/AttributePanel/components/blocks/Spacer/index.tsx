@@ -12,18 +12,18 @@ export function Spacer() {
   return (
     <AttributesPanelWrapper>
       <CollapseWrapper defaultActiveKey={['-1', '0', '1', '2', '3']}>
-        <Collapse.Item name='1' header='Dimension'>
+        <Collapse.Item name='1' header='Размер'>
           <Space direction='vertical'>
             <Height />
             <Padding />
           </Space>
         </Collapse.Item>
 
-        <Collapse.Item name='2' header='Background'>
-          <ContainerBackgroundColor title='Background color' />
+        <Collapse.Item name='2' header='Фон'>
+          <ContainerBackgroundColor title='Цвет фона' />
         </Collapse.Item>
 
-        <Collapse.Item name='4' header='Extra'>
+        <Collapse.Item name='4' header='Дополнительно'>
           <Grid.Col span={24}>
             <ClassName />
           </Grid.Col>

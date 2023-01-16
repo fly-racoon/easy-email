@@ -38,7 +38,7 @@ export type IPage = IBlockData<
 >;
 
 export const Page = createBlock<IPage>({
-  name: 'Page',
+  name: 'Страница',
   type: BasicType.PAGE,
   create: (payload) => {
     const defaultData: IPage = {
@@ -101,9 +101,9 @@ export const Page = createBlock<IPage>({
       : '';
 
     return (
-<>
-      {
-        `
+      <>
+        {
+          `
           <mjml>
           <mj-head>
               ${metaData}
@@ -113,52 +113,52 @@ export const Page = createBlock<IPage>({
               ${breakpoint}
               ${extraHeadContent}
               ${value.fonts
-          ?.filter(Boolean)
-          .map(
-            (item) =>
-              `<mj-font name="${item.name}" href="${item.href}" />`
-          )}
+            ?.filter(Boolean)
+            .map(
+              (item) =>
+                `<mj-font name="${item.name}" href="${item.href}" />`
+            )}
             <mj-attributes>
               ${value.headAttributes}
               ${value['font-family']
-          ? `<mj-all font-family="${value['font-family'].replace(
-            /"/gm,
-            ''
-          )}" />`
-          : ''
-        }
+            ? `<mj-all font-family="${value['font-family'].replace(
+              /"/gm,
+              ''
+            )}" />`
+            : ''
+          }
               ${value['font-size']
-          ? `<mj-text font-size="${value['font-size']}" />`
-          : ''
-        }
+            ? `<mj-text font-size="${value['font-size']}" />`
+            : ''
+          }
               ${value['text-color']
-          ? `<mj-text color="${value['text-color']}" />`
-          : ''
-        }
+            ? `<mj-text color="${value['text-color']}" />`
+            : ''
+          }
         ${value['line-height']
-          ? `<mj-text line-height="${value['line-height']}" />`
-          : ''
-        }
+            ? `<mj-text line-height="${value['line-height']}" />`
+            : ''
+          }
         ${value['font-weight']
-          ? `<mj-text font-weight="${value['font-weight']}" />`
-          : ''
-        }
+            ? `<mj-text font-weight="${value['font-weight']}" />`
+            : ''
+          }
               ${value['content-background-color']
-          ? `<mj-wrapper background-color="${value['content-background-color']}" />
+            ? `<mj-wrapper background-color="${value['content-background-color']}" />
              <mj-section background-color="${value['content-background-color']}" />
             `
-          : ''
-        }
+            : ''
+          }
 
             </mj-attributes>
           </mj-head>
           <mj-body ${getAdapterAttributesString(params)}>`}
 
-      {data.children.map((child, index) => <BlockRenderer {...params} idx={getChildIdx(getPageIdx(), index)} key={index} data={child} />)}
+        {data.children.map((child, index) => <BlockRenderer {...params} idx={getChildIdx(getPageIdx(), index)} key={index} data={child} />)}
 
-      {'</mj-body></mjml > '}
-</>
-);
+        {'</mj-body></mjml > '}
+      </>
+    );
   }
 
 });;;

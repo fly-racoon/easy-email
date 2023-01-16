@@ -65,7 +65,7 @@ const create: CreateInstance<IText> = payload => {
     type: BasicType.TEXT,
     data: {
       value: {
-        content: 'Make it easy for everyone to compose emails!',
+        content: 'Делаем так, чтобы всем было легко составлять электронные письма!',
       },
     },
     attributes: {

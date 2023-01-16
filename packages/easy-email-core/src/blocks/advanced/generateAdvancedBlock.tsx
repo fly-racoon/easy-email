@@ -123,8 +123,8 @@ export interface IConditionGroupItem {
 }
 
 export enum Operator {
-  TRUTHY = 'truthy',
-  FALSY = 'falsy',
+  TRUTHY = 'истинно',
+  FALSY = 'ложно',
   EQUAL = '==',
   NOT_EQUAL = '!=',
   GREATER = '>',

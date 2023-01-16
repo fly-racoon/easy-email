@@ -8,18 +8,18 @@ export function getPlaceholder(params: Parameters<IBlock['render']>[0]) {
 
   let text: null | string = null;
   if (type === BasicType.PAGE) {
-    text = 'Drop a Wrapper block here';
+    text = 'Переместите сюда блок обертку';
   } else if (type === BasicType.WRAPPER || type === AdvancedType.WRAPPER) {
-    text = 'Drop a Section block here';
+    text = 'Переместите сюда блок секцию';
   } else if (
     type === BasicType.SECTION ||
     type === BasicType.GROUP ||
     type === AdvancedType.SECTION ||
     type === AdvancedType.GROUP
   ) {
-    text = 'Drop a Column block here';
+    text = 'Переместите сюда блок столбец';
   } else if (type === BasicType.COLUMN || type === AdvancedType.COLUMN) {
-    text = 'Drop a content block here';
+    text = 'Переместите сюда блок контент';
   }
 
   if (!text) return null;

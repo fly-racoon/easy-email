@@ -19,12 +19,12 @@ export function Decoration() {
           Decoration
         </TextStyle>
         <TextField
-          label='Border radius'
+          label='Радиус границы'
           name={`${focusIdx}.attributes.borderRadius`}
           inline
         />
         <TextField
-          label='Border'
+          label='Граница'
           name={`${focusIdx}.attributes.border`}
           inline
         />

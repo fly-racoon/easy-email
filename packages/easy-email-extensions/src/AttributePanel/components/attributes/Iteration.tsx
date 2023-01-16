@@ -20,7 +20,7 @@ export function Iteration() {
           change(`${focusIdx}.data.value.iteration`, {
             enabled: true,
             dataSource: '',
-            itemName: 'item',
+            itemName: 'элемент',
             limit: 9999,
             mockQuantity: 1,
           } as AdvancedBlock['data']['value']['iteration']);
@@ -42,8 +42,8 @@ export function Iteration() {
     <Collapse.Item
       className='iteration'
       destroyOnHide
-      name='Iteration'
-      header='Iteration'
+      name='Повторение'
+      header='Повторение'
       extra={(
         <div style={{ marginRight: 10 }}>
           <Switch checked={iteration?.enabled} onChange={onIterationToggle} />
@@ -56,13 +56,13 @@ export function Iteration() {
             <Grid.Row>
               <Grid.Col span={11}>
                 <TextField
-                  label='Data source'
+                  label='Источник данных'
                   name={`${focusIdx}.data.value.iteration.dataSource`}
                 />
               </Grid.Col>
               <Grid.Col offset={1} span={11}>
                 <TextField
-                  label='Item name'
+                  label='Имя элемента'
                   name={`${focusIdx}.data.value.iteration.itemName`}
                 />
               </Grid.Col>
@@ -70,7 +70,7 @@ export function Iteration() {
             <Grid.Row>
               <Grid.Col span={11}>
                 <TextField
-                  label='Limit'
+                  label='Максимальный предел'
                   name={`${focusIdx}.data.value.iteration.limit`}
                   quickchange
                   type='number'
@@ -79,7 +79,7 @@ export function Iteration() {
               </Grid.Col>
               <Grid.Col offset={1} span={11}>
                 <TextField
-                  label='Mock quantity'
+                  label='Тестовое количество'
                   max={iteration?.limit}
                   name={`${focusIdx}.data.value.iteration.mockQuantity`}
                   type='number'

@@ -12,7 +12,7 @@ export function Margin() {
         <Stack wrap={false}>
           <Stack.Item fill>
             <TextField
-              label='Top'
+              label='Верхний'
               quickchange
               name={`${focusIdx}.attributes.marginTop`}
               inline
@@ -20,7 +20,7 @@ export function Margin() {
           </Stack.Item>
           <Stack.Item fill>
             <TextField
-              label='Bottom'
+              label='Нижний'
               quickchange
               name={`${focusIdx}.attributes.marginBottom`}
               inline
@@ -31,7 +31,7 @@ export function Margin() {
         <Stack wrap={false}>
           <Stack.Item fill>
             <TextField
-              label='Left'
+              label='Левый'
               quickchange
               name={`${focusIdx}.attributes.marginLeft`}
               inline
@@ -39,7 +39,7 @@ export function Margin() {
           </Stack.Item>
           <Stack.Item fill>
             <TextField
-              label='Right'
+              label='Правый'
               quickchange
               name={`${focusIdx}.attributes.marginRight`}
               inline

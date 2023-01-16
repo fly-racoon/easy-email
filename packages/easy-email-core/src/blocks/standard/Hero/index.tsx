@@ -25,7 +25,7 @@ export type IHero = IBlockData<
 >;
 
 export const Hero = createBlock<IHero>({
-  name: 'Hero',
+  name: 'Главный блок',
   type: BasicType.HERO,
   create: (payload) => {
     const defaultData: IHero = {

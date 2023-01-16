@@ -32,7 +32,7 @@ export function Navbar() {
       <CollapseWrapper defaultActiveKey={['0', '1', '2']}>
         <Collapse.Item
           name='0'
-          header='Layout'
+          header='Макет'
         >
           <Stack
             vertical
@@ -75,7 +75,7 @@ export function Navbar() {
         </Collapse.Item>
         <Collapse.Item
           name='4'
-          header='Extra'
+          header='Дополнительно'
         >
           <Grid.Col span={24}>
             <ClassName />
@@ -103,7 +103,7 @@ function NavbarLink({
         <Grid.Row>
           <Grid.Col span={11}>
             <TextField
-              label='Content'
+              label='Содержимое'
               name={`${focusIdx}.data.value.links.[${index}].content`}
             />
           </Grid.Col>
@@ -112,7 +112,7 @@ function NavbarLink({
             span={11}
           >
             <ColorPickerField
-              label='Color'
+              label='Цвет'
               name={`${focusIdx}.data.value.links.[${index}].color`}
             />
           </Grid.Col>
@@ -127,7 +127,7 @@ function NavbarLink({
             span={11}
           >
             <TextField
-              label='Font size'
+              label='Размер шрифта'
               quickchange
               name={`${focusIdx}.data.value.links.[${index}].font-size`}
             />

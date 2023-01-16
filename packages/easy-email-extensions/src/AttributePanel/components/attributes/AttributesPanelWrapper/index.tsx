@@ -48,7 +48,7 @@ export const AttributesPanelWrapper: React.FC<AttributesPanelWrapper> = props =>
                   variation='strong'
                   size='large'
                 >
-                  {`${block.name} `} {t('attributes')}
+                  {t('Page attributes')}
                 </TextStyle>
               </Stack>
               <Stack.Item>{props.extra}</Stack.Item>
